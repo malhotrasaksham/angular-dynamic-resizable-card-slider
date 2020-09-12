@@ -1,0 +1,12 @@
+<div class="container" #container>
+	<div class="left" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}"></div>
+	<div class="cards">
+		<div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+			<div class="card" *ngFor="let i of arr; let index = index" [ngStyle]="{'width': cardWidth}">
+				<span>{{i}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="right" (click)="currentPage != totalPages && changePage(+1)"
+		[ngClass]="{'disabled':currentPage === totalPages}"></div>
+</div>
