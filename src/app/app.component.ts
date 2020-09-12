@@ -22,6 +22,10 @@ export class AppComponent {
     if (newCardsPerPage != this.cardsPerPage) {
       this.cardsPerPage = newCardsPerPage;
       this.initializeSlider();
+      if (this.currentPage > this.totalPages) {
+        this.currentPage = this.totalPages;
+        this.populatePagePosition();
+      }
     }
   }
 
@@ -39,7 +43,6 @@ export class AppComponent {
   }
 
   getCardsPerPage() {
-    console.log(Math.floor(this.container.nativeElement.offsetWidth / 200));
     return Math.floor(this.container.nativeElement.offsetWidth / 200);
   }
 
