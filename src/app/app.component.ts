@@ -6,7 +6,7 @@ import { Component, HostListener, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   totalCards: number = this.arr.length;
   currentPage: number = 1;
   pagePosition: string = "0%";
